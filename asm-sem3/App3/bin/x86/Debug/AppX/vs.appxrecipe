@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-09-17T02:37:11.628</Modified>
+      <Modified>2018-09-17T04:45:17.014</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\App3.exe">
       <PackagePath>entrypoint\App3.exe</PackagePath>
-      <Modified>2018-09-17T02:37:11.374</Modified>
+      <Modified>2018-09-17T04:45:16.025</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -551,15 +551,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\App3.xr.xml">
       <PackagePath>App3.xr.xml</PackagePath>
-      <Modified>2018-09-14T13:34:41.452</Modified>
+      <Modified>2018-09-17T04:45:15.694</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-09-17T02:37:11.202</Modified>
+      <Modified>2018-09-17T04:45:15.735</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2018-09-17T02:37:11.203</Modified>
+      <Modified>2018-09-17T04:45:15.736</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17134.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -572,7 +572,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\wLink\source\repos\asm-sem3\App3\bin\x86\Debug\Core\App3.exe">
       <PackagePath>App3.exe</PackagePath>
-      <Modified>2018-09-17T02:37:11.626</Modified>
+      <Modified>2018-09-17T04:45:17.005</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

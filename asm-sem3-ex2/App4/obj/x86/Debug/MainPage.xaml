@@ -7,24 +7,37 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="MediaTransportControls" x:Key="myTransportControlsStyle"></Style>
+    </Page.Resources>
 
     <Grid>
-        <Pivot  >
-            <Pivot.Title>
-                <Grid>
-                    <TextBlock Text="Songs and Videos" Style="{ThemeResource SubheaderTextBlockStyle}"/>
-                </Grid>
-            </Pivot.Title>
+        <StackPanel>
+            <Pivot>
+                <Pivot.Title>
+                    <Grid>
+                        <TextBlock Text="Songs and Videos" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                    </Grid>
+                </Pivot.Title>
 
-            <PivotItem Header="Songs">
-                <Button x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"                   >Choose song</Button>
-            </PivotItem>
+                <PivotItem Header="Songs">
+                    <Button x:ConnectionId='5' HorizontalAlignment="Center" VerticalAlignment="Center"                   >Choose song</Button>
+                </PivotItem>
 
-            <PivotItem Header="Videos">
-                <Button x:ConnectionId='3' HorizontalAlignment="Center" VerticalAlignment="Center"                    >Choose video</Button>
-            </PivotItem>
-        </Pivot>
-        <MediaPlayerElement x:ConnectionId='2' x:Name="_mediaPlayerElement" AreTransportControlsEnabled="False" HorizontalAlignment="Stretch"  Grid.Row="0"/>
+                <PivotItem Header="Videos">
+                    <Button x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"                    >Choose video</Button>
+                </PivotItem>
+            </Pivot>
+
+            <TextBlock x:ConnectionId='2' x:Name="FileName" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="20"></TextBlock>
+
+            <MediaPlayerElement x:ConnectionId='3' x:Name="mediaPlayer" AreTransportControlsEnabled="True">
+                <MediaPlayerElement.TransportControls>
+                    <MediaTransportControls  IsZoomButtonVisible="False" IsZoomEnabled="False"
+                      IsPlaybackRateButtonVisible="True" IsPlaybackRateEnabled="True" Style="{StaticResource myTransportControlsStyle}"/>
+                </MediaPlayerElement.TransportControls>
+            </MediaPlayerElement>
+        </StackPanel>
     </Grid>
 </Page>
 

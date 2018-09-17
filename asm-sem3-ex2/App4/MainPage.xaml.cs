@@ -31,30 +31,31 @@ namespace App4
             this.InitializeComponent();
         }
 
-        private static StorageFile file;
         private async void ChooseSong(object sender, RoutedEventArgs e)
         {
-            FileOpenPicker openPicker = new FileOpenPicker();
-            openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            openPicker.FileTypeFilter.Add(".mp3");
-            
-            file = await openPicker.PickSingleFileAsync();
-            
-            _mediaPlayerElement.Source = MediaSource.CreateFromUri(new Uri(file.Path));
-            _mediaPlayerElement.MediaPlayer.Play();
-        }
+            await SetLocalMedia(".mp3");
+        } 
 
         private async void ChooseVideo(object sender, RoutedEventArgs e)
         {
-            FileOpenPicker openPicker = new FileOpenPicker();
-            openPicker.SuggestedStartLocation = PickerLocationId.Desktop;
-            openPicker.FileTypeFilter.Add(".mp4");
+            await SetLocalMedia(".mp4");
+        }
 
-            file = await openPicker.PickSingleFileAsync();
+        async private System.Threading.Tasks.Task SetLocalMedia(string type)
+        {
+            var openPicker = new Windows.Storage.Pickers.FileOpenPicker();
 
-            _mediaPlayerElement.Source = MediaSource.CreateFromUri(new Uri(file.Path));
-            _mediaPlayerElement.MediaPlayer.AudioCategory = MediaPlayerAudioCategory.Media;
-            _mediaPlayerElement.MediaPlayer.Play();
+            openPicker.FileTypeFilter.Add(type);
+
+            var file = await openPicker.PickSingleFileAsync();
+
+            // mediaPlayer is a MediaPlayerElement defined in XAML
+            if (file != null)
+            {
+                mediaPlayer.Source = MediaSource.CreateFromStorageFile(file);
+                FileName.Text = file.Name;
+                mediaPlayer.MediaPlayer.Play();
+            }
         }
     }
 }

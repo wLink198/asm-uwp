@@ -36,10 +36,10 @@
                                 AutomationProperties.Name="{Binding Name}">
                                 <Image Source="{Binding Thumbnail}"
                                        Height="50" Width="50" VerticalAlignment="Center"/>
-                                <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
-                                <TextBlock Text="{Binding Email}" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
-                                <TextBlock Text="{Binding Phone}" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
-                                <TextBlock Text="{Binding Address}" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
+                                <TextBlock Text="{Binding Name}" Width="200" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
+                                <TextBlock Text="{Binding Email}" Width="200" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
+                                <TextBlock Text="{Binding Phone}" Width="200" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
+                                <TextBlock Text="{Binding Address}" Width="200" VerticalAlignment="Center" Style="{ThemeResource BaseTextBlockStyle}" Foreground="{ThemeResource SystemControlPageTextBaseHighBrush}" Margin="12,0,0,0"/>
 
                             </StackPanel>
                         </DataTemplate>

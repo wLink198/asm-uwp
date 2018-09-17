@@ -4,26 +4,39 @@
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Background" />
+      <RootProperty Name="Resources" />
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaTransportControls">
+      <RootProperty Name="IsZoomButtonVisible" />
+      <RootProperty Name="IsZoomEnabled" />
+      <RootProperty Name="IsPlaybackRateButtonVisible" />
+      <RootProperty Name="IsPlaybackRateEnabled" />
+      <RootProperty Name="Style" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Children" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Title" />
       <RootProperty Name="Items" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
-      <RootProperty Name="AreTransportControlsEnabled" />
-      <RootProperty Name="HorizontalAlignment" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Text" />
       <RootProperty Name="Style" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.MediaPlayerElement">
+      <RootProperty Name="AreTransportControlsEnabled" />
+      <RootProperty Name="TransportControls" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
       <RootProperty Name="Content" />
