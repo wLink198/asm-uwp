@@ -9,18 +9,18 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Pivot Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}" >
+        <Pivot  >
             <Pivot.Title>
                 <Grid>
                     <TextBlock Text="Songs and Videos" Style="{ThemeResource SubheaderTextBlockStyle}"/>
                 </Grid>
             </Pivot.Title>
 
-            <PivotItem Header="Songs" Margin="0">
+            <PivotItem Header="Songs">
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="ChooseSong">Choose song</Button>
             </PivotItem>
 
-            <PivotItem Header="Videos" Margin="0">
+            <PivotItem Header="Videos">
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Click="ChooseVideo">Choose video</Button>
             </PivotItem>
         </Pivot>

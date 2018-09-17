@@ -25,7 +25,7 @@ namespace App3
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        string filter = "";
+        List<string> filter = new List<string>();
         public ObservableCollection<Customer> Customers { get => Model.CustomerModel.GetCustomers(filter); set => Model.CustomerModel.SetCustomers(value); }
         public MainPage()
         {
@@ -46,27 +46,39 @@ namespace App3
 
         private async void Filter(object sender, RoutedEventArgs e)
         {
-            filter = await InputTextDialogAsync("Search for customers:");
-            if (filter != null)
-            {
-                Customers.Clear();
-                Customers = Model.CustomerModel.GetCustomers(filter);
-            }      
+            filter = new List<string>();
+            filter = await InputTextDialogAsync("Search for customers:");      
+            Customers.Clear();
+            Customers = Model.CustomerModel.GetCustomers(filter);     
         }
 
-        private async Task<string> InputTextDialogAsync(string title)
+        private async Task<List<string>> InputTextDialogAsync(string title)
         {
             TextBox inputTextBox = new TextBox();
             inputTextBox.AcceptsReturn = false;
             inputTextBox.Height = 32;
+
+            ComboBox cbx = new ComboBox();
+            cbx.PlaceholderText = "slect field"; 
+            cbx.Items.Add("Name");
+            cbx.Items.Add("Email");
+            cbx.Items.Add("Phone");
+
+            StackPanel sp = new StackPanel();
+            sp.Children.Add(inputTextBox);
+            sp.Children.Add(cbx);
             ContentDialog dialog = new ContentDialog();
-            dialog.Content = inputTextBox;
+            dialog.Content = sp;
             dialog.Title = title;
             dialog.IsSecondaryButtonEnabled = true;
             dialog.PrimaryButtonText = "Ok";
             dialog.SecondaryButtonText = "Cancel";
             if (await dialog.ShowAsync() == ContentDialogResult.Primary)
-                return inputTextBox.Text;
+            {
+                filter.Add(inputTextBox.Text);
+                filter.Add(cbx.SelectedValue.ToString());
+                return filter;
+            }
             else
                 return null;
         }

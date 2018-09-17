@@ -9,40 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Pivot Background="{ThemeResource SystemControlChromeHighAcrylicElementMediumBrush}" >
+        <Pivot  >
             <Pivot.Title>
                 <Grid>
-                    <TextBlock Text="Media Player" Style="{ThemeResource SubheaderTextBlockStyle}"/>
+                    <TextBlock Text="Songs and Videos" Style="{ThemeResource SubheaderTextBlockStyle}"/>
                 </Grid>
             </Pivot.Title>
-            
-            <PivotItem Header="Songs" Margin="0">
-                <ListView x:ConnectionId='5' x:Name="MenuList">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel
-                                Orientation="Horizontal" 
-                                Padding="12">
-                                <Button x:ConnectionId='7' HorizontalAlignment="Center" VerticalAlignment="Center"                   >Choose song</Button>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+
+            <PivotItem Header="Songs">
+                <Button x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"                   >Choose song</Button>
             </PivotItem>
-            
-            <PivotItem Header="Videos" Margin="0">
-                <Grid Background="White">
-                    <RelativePanel>
-                        <StackPanel x:ConnectionId='3' x:Name="GeneralInformation" Margin="20">
-                            <Button x:ConnectionId='4' HorizontalAlignment="Center" VerticalAlignment="Center"                    >Choose video</Button>
-                        </StackPanel>
-                        
-                    </RelativePanel>
-                </Grid>
-               
+
+            <PivotItem Header="Videos">
+                <Button x:ConnectionId='3' HorizontalAlignment="Center" VerticalAlignment="Center"                    >Choose video</Button>
             </PivotItem>
         </Pivot>
-        
         <MediaPlayerElement x:ConnectionId='2' x:Name="_mediaPlayerElement" AreTransportControlsEnabled="False" HorizontalAlignment="Stretch"  Grid.Row="0"/>
     </Grid>
 </Page>

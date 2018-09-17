@@ -12,7 +12,7 @@ namespace App3.Model
     {
         private static ObservableCollection<Entity.Customer> listCustomer;
 
-        public static ObservableCollection<Entity.Customer> GetCustomers(string filter)
+        public static ObservableCollection<Entity.Customer> GetCustomers(List<string> filter)
         {
             DataAccess.InitializeDatabase();
 
@@ -27,13 +27,13 @@ namespace App3.Model
 
                 SqliteCommand selectCommand = new SqliteCommand();
                 selectCommand.Connection = db;
-                if (filter == "")
+                if (filter.Count == 0)
                 {
                     selectCommand.CommandText = "SELECT * FROM customers";
                 }
                 else
                 {
-                    selectCommand.CommandText = "SELECT * FROM customers WHERE name LIKE '" + filter + "'";
+                    selectCommand.CommandText = "SELECT * FROM customers WHERE " + filter[1].ToLower() + " LIKE '" + filter[0] + "'";
                 }
                 SqliteDataReader sqliteData = selectCommand.ExecuteReader();
                 Entity.Customer customer;
